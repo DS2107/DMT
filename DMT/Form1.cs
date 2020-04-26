@@ -187,6 +187,17 @@ namespace DMT
 
             TB_LastText.Text = dm.Translator(TB_FirstText.Text, dm.GetPair(CB_FirstLang.SelectedItem.ToString(), CB_LastLang.SelectedItem.ToString()));
             history.Save(TB_FirstText.Text, TB_LastText.Text);
+
+            if (File.Exists("HistryDMT.txt"))
+            {
+                var lines = File.ReadAllLines("HistryDMT.txt", Encoding.UTF8);
+                listBox1.Items.Clear();
+                foreach (var str in lines)
+                {
+
+                    listBox1.Items.Add(str);
+                }
+            } // if
         } // BT_Translete_Click
 
         private void TB_FirstText_KeyDown(object sender, KeyEventArgs e)
@@ -197,6 +208,17 @@ namespace DMT
 
                 TB_LastText.Text = dm.Translator(TB_FirstText.Text, dm.GetPair(CB_FirstLang.SelectedItem.ToString(), CB_LastLang.SelectedItem.ToString()));
                 history.Save(TB_FirstText.Text, TB_LastText.Text);
+
+                if (File.Exists("HistryDMT.txt"))
+                {
+                    var lines = File.ReadAllLines("HistryDMT.txt", Encoding.UTF8);
+                    listBox1.Items.Clear();
+                    foreach (var str in lines)
+                    {
+
+                        listBox1.Items.Add(str);
+                    }
+                } // if
 
             } // if
         } // TB_FirstText_KeyDown
