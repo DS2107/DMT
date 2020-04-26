@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,14 +14,27 @@ namespace DMT
 {
     public partial class Form1 : Form
     {
+        public static Form1 Instance { get; private set; } // тут будет форма
         ComboBox cb;
         DMTransletor dm;
+        History history = new History();
         public Form1()
         {
             InitializeComponent();
+            if (File.Exists("HistryDMT.txt"))
+            {
+                var lines = File.ReadAllLines("HistryDMT.txt",Encoding.UTF8);
 
-            dm = new DMTransletor();
+                foreach (var str in lines)
+                {
 
+                    listBox1.Items.Add(str);
+                }
+            } // if
+       
+        dm = new DMTransletor();
+           
+          
             // При запуске программы ComboBox Будут не пустые 
             CB_FirstLang.SelectedItem = "русский";
             CB_LastLang.SelectedItem = "английский";
@@ -172,6 +186,19 @@ namespace DMT
             TB_LastText.Clear();
 
             TB_LastText.Text = dm.Translator(TB_FirstText.Text, dm.GetPair(CB_FirstLang.SelectedItem.ToString(), CB_LastLang.SelectedItem.ToString()));
+            history.Save(TB_FirstText.Text, TB_LastText.Text);
         } // BT_Translete_Click
+
+        private void TB_FirstText_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TB_LastText.Clear();
+
+                TB_LastText.Text = dm.Translator(TB_FirstText.Text, dm.GetPair(CB_FirstLang.SelectedItem.ToString(), CB_LastLang.SelectedItem.ToString()));
+                history.Save(TB_FirstText.Text, TB_LastText.Text);
+
+            } // if
+        } // TB_FirstText_KeyDown
     }
 }

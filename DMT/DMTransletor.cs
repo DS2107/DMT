@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using YandexLinguistics.NET;
 
+
 namespace DMT
 {
     class DMTransletor:DMTInterface
     {
         YandexLinguistics.NET.Translator tr;
-
+   
         // Ключ ApiYandex
         const string ApiToken = "trnsl.1.1.20200426T145914Z.d3076815a23656e8.c870458b55ce817bc753f9ed9bece941e53bc9aa";
         
@@ -551,6 +552,7 @@ namespace DMT
         {
             // Вернуть текст
             return tr.Translate(wordTotranslete, lang).Text;
+            
         } // translator
 
     }

@@ -38,7 +38,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.MinimBut = new Bunifu.Framework.UI.BunifuThinButton2();
             this.CloseBut = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.CB_FirstLang = new System.Windows.Forms.ComboBox();
             this.BT_russianLast = new Bunifu.Framework.UI.BunifuThinButton2();
             this.BT_England = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -49,6 +48,7 @@
             this.TB_LastText = new Bunifu.Framework.BunifuCustomTextbox();
             this.CB_LastLang = new System.Windows.Forms.ComboBox();
             this.BT_Reset = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -160,13 +160,6 @@
             this.CloseBut.TabIndex = 12;
             this.CloseBut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CloseBut.Click += new System.EventHandler(this.CloseBut_Click);
-            // 
-            // bunifuDragControl2
-            // 
-            this.bunifuDragControl2.Fixed = true;
-            this.bunifuDragControl2.Horizontal = true;
-            this.bunifuDragControl2.TargetControl = this.panel2;
-            this.bunifuDragControl2.Vertical = true;
             // 
             // CB_FirstLang
             // 
@@ -396,7 +389,7 @@
             this.BT_Translete.IconVisible = true;
             this.BT_Translete.IconZoom = 90D;
             this.BT_Translete.IsTab = false;
-            this.BT_Translete.Location = new System.Drawing.Point(861, 390);
+            this.BT_Translete.Location = new System.Drawing.Point(875, 522);
             this.BT_Translete.Name = "BT_Translete";
             this.BT_Translete.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.BT_Translete.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -419,6 +412,7 @@
             this.TB_FirstText.Name = "TB_FirstText";
             this.TB_FirstText.Size = new System.Drawing.Size(424, 210);
             this.TB_FirstText.TabIndex = 9;
+            this.TB_FirstText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_FirstText_KeyDown);
             // 
             // TB_LastText
             // 
@@ -558,12 +552,21 @@
             this.BT_Reset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BT_Reset.Click += new System.EventHandler(this.BT_Reset_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(9, 332);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(563, 199);
+            this.listBox1.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(996, 450);
+            this.ClientSize = new System.Drawing.Size(996, 573);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.BT_Reset);
             this.Controls.Add(this.CB_LastLang);
             this.Controls.Add(this.TB_LastText);
@@ -597,7 +600,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelTag;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private System.Windows.Forms.ComboBox CB_FirstLang;
         private Bunifu.Framework.UI.BunifuFlatButton BT_Translete;
         private Bunifu.Framework.UI.BunifuThinButton2 BT_EnglandLast;
@@ -610,6 +612,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 MinimBut;
         private System.Windows.Forms.ComboBox CB_LastLang;
         private Bunifu.Framework.UI.BunifuThinButton2 BT_Reset;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
