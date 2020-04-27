@@ -46,9 +46,9 @@
             this.BT_Translete = new Bunifu.Framework.UI.BunifuFlatButton();
             this.TB_FirstText = new Bunifu.Framework.BunifuCustomTextbox();
             this.TB_LastText = new Bunifu.Framework.BunifuCustomTextbox();
-            this.CB_LastLang = new System.Windows.Forms.ComboBox();
             this.BT_Reset = new Bunifu.Framework.UI.BunifuThinButton2();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.CB_LastLang = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -165,99 +165,11 @@
             // 
             this.CB_FirstLang.FormattingEnabled = true;
             this.CB_FirstLang.Items.AddRange(new object[] {
-            "азербайджанский",
-            "албанский",
-            "амхарский\t",
             "английский",
-            "арабский",
-            "армянский",
-            "африкаанс",
-            "баскский",
-            "башкирский",
             "белорусский",
-            "бенгальский",
-            "бирманский",
-            "болгарский",
-            "боснийский",
-            "валлийский",
-            "венгерский",
-            "вьетнамский",
-            "гаитянский (креольский)\t",
-            "галисийский",
-            "голландский",
-            "горномарийский",
-            "греческий",
-            "грузинский",
-            "гуджарати",
-            "датский",
-            "иврит",
-            "идиш",
-            "индонезийский",
-            "ирландский",
-            "итальянский",
-            "исландский",
-            "испанский",
-            "казахский",
-            "каннада",
-            "каталанский",
-            "киргизский",
-            "китайский",
-            "корейский",
-            "коса",
-            "кхмерский",
-            "лаосский",
-            "латынь",
-            "латышский",
-            "литовский",
-            "люксембургский",
-            "малагасийский",
-            "малайский",
-            "малаялам",
-            "мальтийский",
-            "македонский",
-            "маори",
-            "маратхи",
-            "марийский",
-            "монгольский",
-            "немецкий",
-            "непальский",
-            "норвежский\t",
-            "панджаби",
-            "папьяменто",
-            "персидский",
-            "польский",
-            "португальский",
-            "румынский",
             "русский",
-            "себуанский",
-            "сербский",
-            "сингальский\t",
-            "словацкий",
-            "словенский\t",
-            "суахили",
-            "сунданский",
-            "таджикский",
-            "тайский",
-            "тагальский",
-            "тамильский",
-            "татарский",
-            "телугу",
-            "турецкий\t",
-            "удмуртский\t",
-            "узбекский",
             "украинский",
-            "урду",
-            "финский",
-            "французский",
-            "хинди",
-            "хорватский",
-            "чешский",
-            "шведский",
-            "шотландский",
-            "эстонский",
-            "эсперанто\t",
-            "яванский\t",
-            "японский"});
+            "французский"});
             this.CB_FirstLang.Location = new System.Drawing.Point(6, 305);
             this.CB_FirstLang.Name = "CB_FirstLang";
             this.CB_FirstLang.Size = new System.Drawing.Size(205, 21);
@@ -424,108 +336,6 @@
             this.TB_LastText.Size = new System.Drawing.Size(424, 210);
             this.TB_LastText.TabIndex = 10;
             // 
-            // CB_LastLang
-            // 
-            this.CB_LastLang.FormattingEnabled = true;
-            this.CB_LastLang.Items.AddRange(new object[] {
-            "азербайджанский",
-            "албанский",
-            "амхарский\t",
-            "английский",
-            "арабский",
-            "армянский",
-            "африкаанс",
-            "баскский",
-            "башкирский",
-            "белорусский",
-            "бенгальский",
-            "бирманский",
-            "болгарский",
-            "боснийский",
-            "валлийский",
-            "венгерский",
-            "вьетнамский",
-            "гаитянский (креольский)\t",
-            "галисийский",
-            "голландский",
-            "горномарийский",
-            "греческий",
-            "грузинский",
-            "гуджарати",
-            "датский",
-            "иврит",
-            "идиш",
-            "индонезийский",
-            "ирландский",
-            "итальянский",
-            "исландский",
-            "испанский",
-            "казахский",
-            "каннада",
-            "каталанский",
-            "киргизский",
-            "китайский",
-            "корейский",
-            "коса",
-            "кхмерский",
-            "лаосский",
-            "латынь",
-            "латышский",
-            "литовский",
-            "люксембургский",
-            "малагасийский",
-            "малайский",
-            "малаялам",
-            "мальтийский",
-            "македонский",
-            "маори",
-            "маратхи",
-            "марийский",
-            "монгольский",
-            "немецкий",
-            "непальский",
-            "норвежский\t",
-            "панджаби",
-            "папьяменто",
-            "персидский",
-            "польский",
-            "португальский",
-            "румынский",
-            "русский",
-            "себуанский",
-            "сербский",
-            "сингальский\t",
-            "словацкий",
-            "словенский\t",
-            "суахили",
-            "сунданский",
-            "таджикский",
-            "тайский",
-            "тагальский",
-            "тамильский",
-            "татарский",
-            "телугу",
-            "турецкий\t",
-            "удмуртский\t",
-            "узбекский",
-            "украинский",
-            "урду",
-            "финский",
-            "французский",
-            "хинди",
-            "хорватский",
-            "чешский",
-            "шведский",
-            "шотландский",
-            "эстонский",
-            "эсперанто\t",
-            "яванский\t",
-            "японский"});
-            this.CB_LastLang.Location = new System.Drawing.Point(568, 305);
-            this.CB_LastLang.Name = "CB_LastLang";
-            this.CB_LastLang.Size = new System.Drawing.Size(205, 21);
-            this.CB_LastLang.TabIndex = 12;
-            // 
             // BT_Reset
             // 
             this.BT_Reset.ActiveBorderThickness = 1;
@@ -560,15 +370,29 @@
             this.listBox1.Size = new System.Drawing.Size(563, 199);
             this.listBox1.TabIndex = 15;
             // 
+            // CB_LastLang
+            // 
+            this.CB_LastLang.FormattingEnabled = true;
+            this.CB_LastLang.Items.AddRange(new object[] {
+            "английский",
+            "белорусский",
+            "русский",
+            "украинский",
+            "французский"});
+            this.CB_LastLang.Location = new System.Drawing.Point(568, 305);
+            this.CB_LastLang.Name = "CB_LastLang";
+            this.CB_LastLang.Size = new System.Drawing.Size(205, 21);
+            this.CB_LastLang.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(996, 573);
+            this.Controls.Add(this.CB_LastLang);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.BT_Reset);
-            this.Controls.Add(this.CB_LastLang);
             this.Controls.Add(this.TB_LastText);
             this.Controls.Add(this.TB_FirstText);
             this.Controls.Add(this.BT_Translete);
@@ -610,9 +434,9 @@
         private Bunifu.Framework.BunifuCustomTextbox TB_FirstText;
         private Bunifu.Framework.UI.BunifuThinButton2 CloseBut;
         private Bunifu.Framework.UI.BunifuThinButton2 MinimBut;
-        private System.Windows.Forms.ComboBox CB_LastLang;
         private Bunifu.Framework.UI.BunifuThinButton2 BT_Reset;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox CB_LastLang;
     }
 }
 
